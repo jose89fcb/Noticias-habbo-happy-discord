@@ -3,6 +3,8 @@ import requests, json, time
 from discord_webhook import DiscordWebhook, DiscordEmbed
 import discord
 
+contenido = "Habbo-happy tienes nuevas noticias de habbo @everyone" #avisara a las personas que esten en tu servidor
+
 webhook_url = "AQUI LA URL DE TU WEBHOOK DE DISCORD" #Debes de crear un WebHook en Discord
 
 def HabboHappyWeb():
@@ -14,7 +16,7 @@ def HabboHappyWeb():
     if new["noticias"]   != Cached["noticias"]:
         if new["imagen"] != Cached["imagen"]:
             if new["url"] != Cached["url"]:
-                webhook = DiscordWebhook(url=webhook_url, username="Habbo-happy")
+                webhook = DiscordWebhook(url=webhook_url, username="Habbo-happy", content=contenido)
                 embed = DiscordEmbed(title='')
                 embed.add_embed_field(name="Habbo-happy.net",  value=f'{new["noticias"]}'+ "\n" + "\n\n\n[Ver Noticia en Habbo-happy.net]" + "("f'{new["url"]}'")")
                 embed.set_image(url=f'{new["imagen"]}')
