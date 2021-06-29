@@ -10,7 +10,9 @@ pip install discord
 
 Accentos corregidos
 Antes:
-<img src="https://i.imgur.com/B1Gx7Ky.png">
 <br>
+<img src="https://i.imgur.com/B1Gx7Ky.png">
+
 Ahora:
+<br>
 <img src="https://i.imgur.com/7R1ibqY.png">
